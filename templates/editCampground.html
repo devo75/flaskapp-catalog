@@ -1,0 +1,20 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+
+<h1>EDIT CAMPGROUND</h1>
+   
+<form action="{{ url_for('editCampground',campground_id = campground.id)}}" method = 'post'>
+        <div class="form-row">
+                <div class="form-group col-md-6">
+                        <input type="text" name='name' class="form-control" placeholder="{{campground.name }}">
+                </div>
+        </div>             
+        <button type="submit" class="btn btn-primary">Edit</button>
+        <a href="{{url_for('showCampgrounds')}}" class="btn btn-secondary">Cancel</a>
+</form>
+
+{% endblock %}
+
+
+  

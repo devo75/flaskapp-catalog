@@ -1,0 +1,15 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+
+<h1>DELETE A CAMPGROUND</h1>
+
+<h1> Are you sure you want to delete the following campground: {{campground.name}}? </h1>
+
+<form action="#" method = 'post'>
+<button type="submit" class="btn btn-danger">Delete</button>
+<a href="{{url_for('showCampgrounds')}}" class="btn btn-secondary">Cancel</span></a>
+
+{% endblock %}
+  
+ 

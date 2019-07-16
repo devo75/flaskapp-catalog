@@ -1,0 +1,19 @@
+a:hover {
+    text-decoration: none;
+
+}
+
+
+header {
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1519395612667-3b754d7b9086?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80') no-repeat center center
+    /cover;
+  }
+
+.banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+}

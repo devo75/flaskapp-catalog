@@ -1,0 +1,14 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="{{url_for('showCampgrounds')}}">View Campgrounds</a>
+      <ul class="navbar-nav ml-auto">
+            {%if 'username' not in session %}
+        <li class="nav-item">
+          <a class="nav-link" a href="{{url_for('showLogin')}}">Click Here to Login </a>
+        </li>
+        {% else %}
+        <li class="nav-item">
+           <a class="nav-link" a href="{{url_for('gdisconnect')}}">Logout </a>
+        </li>
+        {% endif %}
+      </ul>
+  </nav>

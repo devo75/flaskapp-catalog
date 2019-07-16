@@ -1,0 +1,37 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+
+<h1>EDIT REVIEW HERE</h1>
+
+<form action="#" method = 'post'>
+    <label>Campground Experience</label>
+		<p><input type ='text' name='experience' placeholder='{{item.experience}}'></p>
+	<label>Campground Description</label>
+        <p><textarea rows='4' cols='50' name='description' placeholder='{{item.description}}'></textarea></p>
+        
+        {% if item.category == 'Will definitely come back' %}
+        <input type='radio' name='category' value='Will definitely come back' checked >Will definitely come back <br>
+        {%else%}
+	    <input type ='radio' name='category' value='Will definitely come back'>Will definitely come back <br>
+    {% endif %}
+
+    {% if item.category == 'Might come back' %}
+        <input type='radio' name='category' value='Might come back' checked >Might come back <br>
+        {%else%}
+	    <input type ='radio' name='category' value='Might come back'>Might come back <br>
+    {% endif %}
+
+    {% if item.category == 'Will not come back' %}
+        <input type='radio' name='category' value='Will not come back'  checked >Will not come back <br>
+        {%else%}
+	    <input type ='radio' name='category' value='Will not come back'>Will not come back <br>
+    {% endif %}
+   <button type="submit" class="btn btn-primary">Edit Review</button>
+   
+    <a href="{{url_for('showCampgrounds')}}" class="btn btn-secondary">Cancel</a>
+</form>
+
+
+
+{% endblock %}
